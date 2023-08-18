@@ -14,6 +14,12 @@ return new class extends Migration
         Schema::create('patients_services', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->unsignedBigInteger('patient');
+            $table->unsignedBigInteger('service');
+            $table->text('general_comments');
+
+            $table->foreign('patient')->references('id')->on('patients');
+            $table->foreign('service')->references('id')->on('services');
         });
     }
 

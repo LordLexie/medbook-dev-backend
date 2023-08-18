@@ -12,6 +12,12 @@ class ServicesSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        DB::table('services')->insert([
+            'service' => 'Inpatient'
+        ]);
+
+        DB::table('services')->insert([
+            'service' => 'Outpatient'
+        ]);
     }
 }

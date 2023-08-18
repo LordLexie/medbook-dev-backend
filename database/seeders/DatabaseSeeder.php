@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             GenderSeeder::class,
+            ServicesSeeder::class,
         ]);
     }
 }

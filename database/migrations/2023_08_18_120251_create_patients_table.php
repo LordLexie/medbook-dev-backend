@@ -14,6 +14,11 @@ return new class extends Migration
         Schema::create('patients', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('name');                     // Full name of patient
+            $table->date("dob");                        // Date of birth of patient
+            $table->unsignedBigInteger('gender_id');    // Gender of patient
+            
+            $table->foreign('gender_id')->references('id')->on('genders');
         });
     }
 

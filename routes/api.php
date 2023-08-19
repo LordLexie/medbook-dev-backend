@@ -20,4 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::group(['prefix'=>'v1','namespace'=>'App\Http\Controllers\v1'], function(){
     Route::apiResource('services', 'ServicesController');
+    Route::apiResource('genders', 'GenderController');
+    Route::apiResource('patient_services', 'PatientServicesController');
 }); 
+

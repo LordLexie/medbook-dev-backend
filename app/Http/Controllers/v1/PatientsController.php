@@ -2,20 +2,17 @@
 
 namespace App\Http\Controllers\v1;
 
-use App\Http\Resources\GendersCollection;
-use App\Http\Resources\GendersResource;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-use App\Models\Gender;
-class GenderController extends Controller
+class PatientsController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return new GendersCollection(Gender::all());
+        //
     }
 
     /**

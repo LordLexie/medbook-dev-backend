@@ -2,21 +2,17 @@
 
 namespace App\Http\Controllers\v1;
 
-use App\Http\Resources\ServicesCollection;
-use App\Http\Resources\ServicesResource;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-use App\Models\Services;
-
-class ServicesController extends Controller
+class GenderController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return new ServicesCollection(Services::all());
+        //
     }
 
     /**
